@@ -9,7 +9,8 @@
     --font_h1: 3rem;
     --font_h2:2.8rem;
     --font_p:2.5rem;
-    --font_list:1.5rem; 
+    --font_list:2.5rem; 
+    --color_letras: white;
 }
 @font-face {
     font-family:modeloUno ;
@@ -21,15 +22,19 @@
 }
 h1{
    font-size: var(--font_h1);
+   color: var(--color_letras);
 }
 h2{
     font-size: var(--font_h2);
+    color: var(--color_letras);
 }
 p{
     font-size: var(--font_p);
+    color: var(--color_letras);
 }
 a{
     text-decoration: none;
+    color: var(--color_letras);
 
 }
 .modeloUno{
@@ -52,6 +57,8 @@ body{
     position: relative;
     height: 100vh;
     margin: 0;
+    background-color: #474749;
+
 }
 
 
@@ -81,7 +88,6 @@ body{
 .e_footer{
     width: 100%;
     display: flex;
-    border: 1px solid black;
     height: 10vh;
     justify-content: center;
     align-items: flex-end;
@@ -89,20 +95,45 @@ body{
        
 }
 .contain_list{
+
+    background-image: linear-gradient(45deg , yellow , red, green , yellow , red, green);
+    background-clip: text;
+    padding: 0.5rem;
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;    
+    justify-content: space-around;   
+    animation: grad 5s linear infinite;
+  
+    
+}
+@keyframes grad {
+    0%{
+        background-position: 0 0;
+    }
+    50%{
+        background-position: 100vw 0;
+    }    
+    100%{
+        background-position: 0 0;        
+    }
+    
 }
 .e_list{
+    width: 100%;
+    background-color: #474749;
     display: flex;
     justify-content: center;
 
 }
 .e_list a{
     font-size: var(--font_list);
+    font-family: modeloDos;
    
 }
+
+
+
 /**SECCIONES DE TEATRO ESCENOGRAFIA E ILUMINACION**/
 
 .e_main_sec{
@@ -124,6 +155,7 @@ body{
 .itemsec{
     height: 20vh;
     border: 1px solid black;
+    color: var(--color_letras);
 }
 
 
@@ -174,8 +206,7 @@ body{
 }
 
 .itemsec_diseño{
-    border: 1px solid black;
-    height: 20vh;
+     height: 20vh;
 }
 .e_footer_diseño{
     height: 15vh;
@@ -283,7 +314,7 @@ body{
         --font_h1: 5.5rem;
         --font_h2:4rem;
         --font_p:4rem;
-        --font_list:2.8rem;
+        --font_list:3.8rem;
     }
 
     .e_giro{
@@ -305,6 +336,24 @@ body{
         display: inline-block;
         z-index: 10;
       
+    }
+    .e_footer:hover a h2{
+        transition: 1.5s;
+        font-size: 4.5rem;
+        color: #fff;
+        margin-top: 30%;
+        text-shadow:
+            0 0 5px rgba(0,178,255,1),
+            0 0 10px rgba(0,178,255,1),
+            0 0 20px rgba(0,178,255,1),
+            0 0 40px rgba(38,104,127,1),
+            0 0 80px rgba(38,104,127,1),
+            0 0 90px rgba(38,104,127,1),
+            0 0 100px rgba(38,104,127,1),
+            0 0 140px rgba(38,104,127,1),
+            0 0 180px rgba(38,104,127,1);
+                   
+       
     }
     /**SECCIONES DE TEATRO ESCENOGRAFIA E ILUMINACION**/
     .e_giro{
@@ -404,16 +453,25 @@ body{
     }
     .itemIndex{
         height: 100%;
-        width: 24.5%;
+        width: 24%;
         margin: 0;
         padding-top: 10rem;
                   
+    }
+
+    .itemIndex:hover a p{
+        transition: 1.5s;
+        font-size: 4.5rem;
+        text-align: end;
+           
+       
     }
     .itemIndex a{
         width: 100%;
         text-align: center;
     }
-       
+    
+  
     /**diseño**/
     .e_giro{
 
